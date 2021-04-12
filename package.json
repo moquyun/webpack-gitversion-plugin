@@ -1,0 +1,66 @@
+{
+  "name": "webpack-gitversion-plugin",
+  "version": "1.0.0",
+  "description": "A Webpack Plugin for generating Git Version",
+  "license": "MIT",
+  "repository": "moquyun/webpack-gitversion-plugin",
+  "author": "Mo Qunyun <Mo.Qunyun@gmail.com>",
+  "homepage": "https://github.com/moquyun/webpack-gitversion-plugin",
+  "bugs": "https://github.com/moquyun/webpack-gitversion-plugin/issues",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">=10.22.1"
+  },
+  "scripts": {},
+  "files": [
+    "lib",
+    "README.md",
+    "LICENSE"
+  ],
+  "peerDependencies": {
+    "webpack": ">=4.44.2"
+  },
+  "dependencies": {
+    "webpack-sources": "^2.2.0"
+  },
+  "devDependencies": {
+    "@ava/babel": "^1.0.1",
+    "@svgr/webpack": "^5.4.0",
+    "ava": "^3.13.0",
+    "codecov": "^3.1.0",
+    "copy-webpack-plugin": "^6.2.1",
+    "css-loader": "^1.0.0",
+    "del": "^6.0.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^2.0.0",
+    "lint-staged": "^10.4.0",
+    "memory-fs": "^0.4.1",
+    "nyc": "^15.1.0",
+    "prettier": "^2.1.2",
+    "prettier-plugin-package": "^1.2.0",
+    "react": "^16.3.2",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.44.2",
+    "webpack-merge": "^5.2.0"
+  },
+  "ava": {
+    "files": [
+      "!**/fixtures/**",
+      "!**/helpers/**",
+      "!**/output/**"
+    ]
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix"
+    ]
+  },
+  "nyc": {
+    "include": [
+      "lib/*.js"
+    ],
+    "exclude": [
+      "test/"
+    ]
+  }
+}
